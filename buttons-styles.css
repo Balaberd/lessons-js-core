@@ -1,0 +1,123 @@
+.components__buttons {
+    width: 36rem;
+    height: 23rem;
+}
+
+.buttons__wrapper {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.buttons {
+    max-width: 7rem;
+}
+
+.buttons__wrapper_narrow {
+
+    flex-wrap: wrap;
+}
+
+.buttons__wrapper_narrow .buttons {
+    flex: 0 1 33%;
+}
+
+
+
+
+.buttons {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    gap: .5rem;
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    border-radius: .25rem;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+.button__icon {
+    width: 1rem;
+    height: 1rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.button__text {
+    width: 3.5rem;
+}
+
+.button_not-icon {
+    width: 5.5rem;
+}
+
+.button_not-icon .button__icon {
+    display: none;
+}
+
+.button_not-text {
+    width: 2rem;
+    padding: .5rem;
+}
+
+.button_not-text .button__text {
+    display: none;
+}
+
+.buttons_not-filled .button {
+    background: none;
+    color: var(--button-text-color_not-filled);
+}
+
+.buttons_disabled .button {
+    background: none;
+    color: var(--button-text-color_disabled);
+}
+
+.buttons_disabled .button_not-text {
+    background: none;
+    color: var(--button-text-color_disabled);
+    position: relative;
+}
+
+.buttons_disabled .button_not-text:before {
+    content: "Text here";
+    left: 2.5rem;
+    top: .5rem;
+    width: 3.5rem;
+    height: 1rem;
+    position: absolute;
+    opacity: 0;
+}
+
+.buttons_disabled .button .button__icon {
+    fill: var(--button-text-color_disabled)
+}
+
+.buttons__wrapper_narrow .button {
+    width: 5.75rem;
+    height: 1.5rem;
+    padding: .25rem .5rem .25rem .5rem;
+    gap: .25rem;
+}
+
+.buttons__wrapper_narrow .button_not-icon {
+    width: 4.5rem;
+}
+
+.buttons__wrapper_narrow .button_not-text {
+    padding: .25rem;
+    width: 1.5rem;
+}

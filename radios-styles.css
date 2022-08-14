@@ -1,0 +1,21 @@
+.components__radio {
+    width: 6.5rem;
+    height: 4rem;
+    flex-direction: row;
+}
+
+.custom-radio {
+    width: 1rem;
+    height: 1rem;
+
+    appearance: none;
+    background-color: var(--radio-background-color);
+    border: 1px solid var(--radio-border-color);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.custom-radio:checked {
+    border: .25rem solid var(--radio-border-color_checked);
+
+}

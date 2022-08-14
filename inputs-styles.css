@@ -1,0 +1,106 @@
+.components__inputs {
+    width: 22rem;
+    height: 22.5rem;
+}
+
+.custom-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: .5rem;
+
+    width: 16rem;
+    height: 3.5rem;
+}
+
+.custom-input__wrapper {
+    width: 16rem;
+    height: 2rem;
+
+    display: flex;
+    align-items: center;
+    padding: .5rem .25rem .5rem .5rem;
+    gap: .25rem;
+
+    background: var(--input-background);
+
+    border: 1px solid var(--input-border-color);
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+}
+
+.custom-input__label {
+    height: 1rem;
+}
+
+.custom-input__input {
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.custom-input__input::placeholder {
+    color: var(--input-placeholder-color)
+}
+
+.custom-input__button {
+    width: 1.5rem;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    padding: .25rem;
+    border-radius: 0;
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    display: none;
+}
+
+.custom-input__icon {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/************************ incorrect-input styles *******************************/
+
+.custom-input_incorrect .custom-input__wrapper {
+    border: 1px solid var(--input_incorrect-border-color);
+}
+
+.custom-input_incorrect .custom-input__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-input_incorrect .custom-input__icon_x {
+    display: inline;
+    stroke: var(--icon-color-x)
+}
+
+/************************ disabled-input styles *******************************/
+
+.custom-input_disabled .custom-input__wrapper {
+    background-color: var(--input-background_disabled);
+}
+
+.custom-input_disabled .custom-input__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-input_disabled .custom-input__icon_locked {
+    display: inline;
+    fill: var(--icon-color-disabled)
+}
+
+
+
+
+
