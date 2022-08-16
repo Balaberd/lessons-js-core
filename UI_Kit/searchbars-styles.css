@@ -64,10 +64,6 @@
     stroke: var(--icon-color-x);
 }
 
-.custom-searchbars__icon_search {
-    stroke: var(--icon-color-search)
-}
-
 .custom-searchbars__button_right {
     display: none;
 }

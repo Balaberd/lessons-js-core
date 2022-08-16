@@ -1,60 +1,16 @@
-:root {
-    --font-color: black;
-
-    --main-background: rgba(210, 218, 224, 0.657);
-
-    --input-border-color: #459DF5;
-    --input_incorrect-border-color: #F53152;
-    --input-background: #FFFFFF;
-    --input-background_disabled: #BAD8F5;
-    --input-placeholder-color: #BAD8F5;
-
-    --icon-color-x: #BAD8F5;
-    --icon-color-disabled: #000000;
-    --icon-color-search: #459DF5;
-    --icon-color-checked: #FFFFFF;
-
-    --checkbox-border-color: #BAD8F5;
-    --checkbox-border-color_checked: #459DF5;
-    --checkbox-background: #FFFFFF;
-    --checkbox-background_checked: #459DF5;
-
-    --radio-border-color: #BAD8F5;
-    --radio-border-color_checked: #459DF5;
-    --radio-background-color: #FFFFFF;
-
-    --button-background-color: #459DF5;
-    --button-text-color: #FFFFFF;
-    --button-text-color_not-filled: #459DF5;
-    --button-text-color_disabled: #000000;
-
-    --dropdowns-background-color: #FFFFFF;
-    --dropdowns-font-color_checked: #459DF5;
-
-    --dropdowns__button-font-color: #459DF5;
-    --dropdowns__button-font-color_hover: #FFFFFF;
-
-}
-
-html {
-    font-family: 'Ubuntu', sans-serif;
-}
-
-body {
-    background-color: var(--main-background);
+.wrapper {
+    font-size: 36px;
+    font-weight: 600;
+    width: 95vw;
+    height: 95vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 3rem;
-    align-items: center;
 }
 
-.components {
-    border: 1px dashed #8055FF;
-    box-sizing: border-box;
-    border-radius: 5px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+.link {
+    text-decoration: none;
+    color: rgb(17, 119, 202);
 }

@@ -1,33 +1,39 @@
 .components__buttons {
     width: 36rem;
     height: 23rem;
+
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: .5rem;
+    grid-template-areas:
+        "box-1 box-2 box-3"
+        "box-4 box-5 .";
 }
 
-.buttons__wrapper {
-    display: flex;
-    height: 50%;
-    width: 100%;
-    gap: 3rem;
-    justify-content: center;
+.box-1 {
+    grid-area: box-1;
+}
+
+.box-2 {
+    grid-area: box-2;
+}
+
+.box-3 {
+    grid-area: box-3;
+}
+
+.box-4 {
+    grid-area: box-4;
+}
+
+.box-5 {
+    grid-area: box-5;
 }
 
 .buttons {
     max-width: 7rem;
-}
-
-.buttons__wrapper_narrow {
-
-    flex-wrap: wrap;
-}
-
-.buttons__wrapper_narrow .buttons {
-    flex: 0 1 33%;
-}
-
-
-
-
-.buttons {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -76,48 +82,44 @@
     display: none;
 }
 
-.buttons_not-filled .button {
+.buttons_not-filled {
     background: none;
     color: var(--button-text-color_not-filled);
 }
 
-.buttons_disabled .button {
+.buttons_disabled {
     background: none;
     color: var(--button-text-color_disabled);
 }
 
-.buttons_disabled .button_not-text {
-    background: none;
-    color: var(--button-text-color_disabled);
+.buttons_disabled.button_not-text {
     position: relative;
 }
 
-.buttons_disabled .button_not-text:before {
-    content: "Text here";
-    left: 2.5rem;
+.buttons_disabled.button_not-text .button__text {
+    display: inline;
     top: .5rem;
-    width: 3.5rem;
-    height: 1rem;
+    left: 2.5rem;
     position: absolute;
     opacity: 0;
 }
 
-.buttons_disabled .button .button__icon {
+.buttons_disabled .button__icon {
     fill: var(--button-text-color_disabled)
 }
 
-.buttons__wrapper_narrow .button {
+.buttons_narrow {
     width: 5.75rem;
     height: 1.5rem;
     padding: .25rem .5rem .25rem .5rem;
     gap: .25rem;
 }
 
-.buttons__wrapper_narrow .button_not-icon {
+.buttons_narrow.button_not-icon {
     width: 4.5rem;
 }
 
-.buttons__wrapper_narrow .button_not-text {
+.buttons_narrow.button_not-text {
     padding: .25rem;
     width: 1.5rem;
 }

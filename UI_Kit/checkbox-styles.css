@@ -35,6 +35,6 @@
     background-color: var(--checkbox-background_checked);
 }
 
-.custom-checkbox__checkbox:checked + .custom-checkbox__icon {
+.custom-checkbox__checkbox:checked+.custom-checkbox__icon {
     display: inline;
 }
