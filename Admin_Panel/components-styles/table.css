@@ -1,0 +1,86 @@
+.table {
+    font-size: 13px;
+    flex-grow: 3;
+    height: calc(100vh - 10.75rem);
+    background-color: blanchedalmond;
+}
+
+.table__header {
+    height: 2.5rem;
+    padding: 0 .5rem 0 .5rem;
+    color: var( --font-color_active);
+    background-color: var(--main-elements-color);
+    display: flex;
+    align-items: center;
+}
+
+.table__content {
+    height: calc(100% - 6rem);
+    overflow: auto;
+    padding: 0 .5rem 0 .5rem;
+
+
+    background-color: aliceblue;                /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+.table__item {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #EBF0F5;             /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+.table__footer {
+    height: 3rem;
+    padding: 0 .5rem 0 .5rem;
+
+
+    background-color: blueviolet;                 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+}
+
+.table__lines {
+    height: 100%;
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+    padding: 0 .75rem 0 .75rem;
+}
+.table__line-checkbox {
+    width: 2rem;
+    min-width: 2rem;
+}
+
+.table__line-number {
+    width: 6.75rem;
+    min-width: 6.75rem;
+}
+
+.table__line-date {
+    width: 11rem;
+    min-width: 11rem;
+}
+
+.table__line-status {
+    width: 11rem;
+    min-width: 11rem;
+}
+
+.table__line-position {
+    width: 6rem;
+    min-width: 6rem;
+}
+
+.table__line-sum {
+    width: 8rem;
+    min-width: 8rem;
+}
+
+.table__line-name {
+    width: 48.25rem;
+    min-width: 48.25rem;
+}
+
+hr {
+    color: red;
+}
