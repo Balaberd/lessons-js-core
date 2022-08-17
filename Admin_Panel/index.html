@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./components-styles/header.css">
     <link rel="stylesheet" href="./components-styles/filter.css">
+    <link rel="stylesheet" href="./components-styles/filter__buttons.css">
+
     <link rel="stylesheet" href="./components-styles/table.css">
     <link rel="stylesheet" href="./components-styles/chechbox.css">
+    <link rel="stylesheet" href="./components-styles/filter__searchbar.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="filter_active">
 
     <header class="header">
 
@@ -46,7 +49,56 @@
     </header>
 
     <div class="filter">
-        filter
+        <div class="filter__main-panel">
+            <div class="filter__left-block">
+                <div class="custom-searchbars__wrapper">
+                    <button class="custom-searchbars__button" type="button">
+                        <svg class="custom-searchbars__icon" viewBox="0 0 16 16" fill="none" stroke="#8055FF"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.0355 10.0355C11.9882 8.08291 11.9882 4.91709 10.0355 2.96447C8.08291 1.01184 4.91709 1.01184 2.96447 2.96447C1.01184 4.91709 1.01184 8.08291 2.96447 10.0355C4.91709 11.9882 8.08291 11.9882 10.0355 10.0355ZM10.0355 10.0355L14 14M14 14L14.5 13.5L11.5 10.5M14 14L13.5 14.5L10.5 11.5"
+                                fill="none" />
+                        </svg>
+                    </button>
+                    <input class="custom-searchbars__input" placeholder="Номер заказа или ФИО">
+                    <button class="custom-searchbars__button custom-searchbars__button_right" type="button">
+                        <svg class="custom-searchbars__icon custom-searchbars__icon_x" viewBox="0 0 16 16" fill="none"
+                            stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5 3.5L3.5 12.5M3.5 3.5L12.5 12.5" fill="none" />
+                        </svg>
+                    </button>
+                </div>
+                <button class="filter__button">
+                    <svg class="filter__button-icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4H4V5.5L7 8.5V12L9 13V8.5L12 5.5V4Z" stroke="none" />
+                    </svg>
+                    <span class="filter__button-text">Фильтры</span>
+                </button>
+            </div>
+            <button class="filter__button">
+                <svg class="filter__button-icon" viewBox="0 0 16 16" fill="none" stroke="#8055FF"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.50251 7.5V8.5C2.50251 10.75 4.75251 13.5 8.00251 13.5C10 13.5 11.6187 12.5 12.6 11"
+                        fill="none" />
+                    <path d="M13.5 8.5V7.5C13.5 5.25 11.25 2.5 7.99997 2.5C6 2.5 4.38135 3.5 3.4 5" fill="none" />
+                    <path d="M4.5 9.5L2.50254 7.5L0.752533 9.75" fill="none" />
+                    <path d="M11.5 6.5L13.5 8.5L15.25 6.25" fill="none" />
+                </svg>
+                <span class="filter__button-text">Загрузка</span>
+            </button>
+        </div>
+
+        <div class="filter__main-panel_additional">
+
+            <div class="filter-menu filter-menu_sum">date</div>
+            <div class="filter-menu filter-menu_status">status</div>
+            <div class="filter-menu filter-menu_sum">sum</div>
+            <button class="filter__button">Применить</button>
+
+
+        </div>
+
     </div>
 
     <main class="table">
@@ -65,16 +117,48 @@
                 </div>
             </div>
             <div class="table__lines table__line-number">#</div>
-            <div class="table__lines table__line-date">Дата</div>
-            <div class="table__lines table__line-status">Статус</div>
-            <div class="table__lines table__line-position">Позиция</div>
-            <div class="table__lines table__line-sum">Сумма</div>
+            <div class="table__lines table__line-date">
+                Дата
+                <button class="table__button">
+                    <svg class="table__icon icon_sort" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 6H11V6.5L8.25 11H7.75L5 6.5V6Z" stroke="none" />
+                    </svg>
+                </button>
+            </div>
+            <div class="table__lines table__line-status">
+                Статус
+                <button class="table__button">
+                    <svg class="table__icon icon_sort" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 6H11V6.5L8.25 11H7.75L5 6.5V6Z" stroke="none" />
+                    </svg>
+                </button>
+            </div>
+            <div class="table__lines table__line-position">
+                Позиция
+                <button class="table__button">
+                    <svg class="table__icon icon_sort" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 6H11V6.5L8.25 11H7.75L5 6.5V6Z" stroke="none" />
+                    </svg>
+                </button>
+            </div>
+            <div class="table__lines table__line-sum">
+                Сумма
+                <button class="table__button">
+                    <svg class="table__icon icon_sort" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 6H11V6.5L8.25 11H7.75L5 6.5V6Z" stroke="none" />
+                    </svg>
+                </button>
+            </div>
             <div class="table__lines table__line-name">ФИО покупателя</div>
         </div>
 
         <div class="table__content">
 
-            <div class="table__item">
+            <div class="table__item status_new">
                 <div class="table__lines table__line-checkbox">
                     <div class="custom-checkbox">
                         <label>
@@ -93,7 +177,32 @@
                     15.02.2021, 18:00
                 </div>
                 <div class="table__lines table__line-status">
-                    Новый
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
                 </div>
                 <div class="table__lines table__line-position">
                     6
@@ -103,6 +212,519 @@
                 </div>
                 <div class="table__lines table__line-name">
                     Чернышев Филип Семёнович
+                </div>
+            </div>
+
+            <div class="table__item status_new">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    2353474
+                </div>
+                <div class="table__lines table__line-date">
+                    12.03.2021, 05:15
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    2
+                </div>
+                <div class="table__lines table__line-sum">
+                    98 003 Р
+                </div>
+                <div class="table__lines table__line-name">
+                    Филиппов Степан Васильевич
+                </div>
+            </div>
+
+            <div class="table__item status_calc">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    1103397
+                </div>
+                <div class="table__lines table__line-date">
+                    03.02.2021, 08:04
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    5
+                </div>
+                <div class="table__lines table__line-sum">
+                    3 800 Р
+                </div>
+                <div class="table__lines table__line-name">
+                    Тихонова Алина Давидовна
+                </div>
+            </div>
+
+            <div class="table__item status_done">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    6924662
+                </div>
+                <div class="table__lines table__line-date">
+                    21.01.2021, 13: 32
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    1
+                </div>
+                <div class="table__lines table__line-sum">
+                    5 700 Р
+                </div>
+                <div class="table__lines table__line-name">
+                    Александрова Юлия Никитична
+                </div>
+            </div>
+
+            <div class="table__item status_canceled">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    2200086
+                </div>
+                <div class="table__lines table__line-date">
+                    19.01.2021, 10:28
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    -
+                </div>
+                <div class="table__lines table__line-sum">
+                    -
+                </div>
+                <div class="table__lines table__line-name">
+                    Андрей
+                </div>
+            </div>
+
+            <div class="table__item status_stoped">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    2842064
+                </div>
+                <div class="table__lines table__line-date">
+                    04.01.2021, 12:12
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    1
+                </div>
+                <div class="table__lines table__line-sum">
+                    20 500 Р
+                </div>
+                <div class="table__lines table__line-name">
+                    Судакова Анастасия Ильинична
+                </div>
+            </div>
+
+            <div class="table__item status_done">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    1730071
+                </div>
+                <div class="table__lines table__line-date">
+                    17.12.2020, 22:45
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    1
+                </div>
+                <div class="table__lines table__line-sum">
+                    1 399 Р
+                </div>
+                <div class="table__lines table__line-name">
+                    Зверева Арина Николаевна
+                </div>
+            </div>
+
+            <div class="table__item status_done">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    7987376
+                </div>
+                <div class="table__lines table__line-date">
+                    07.12.2020, 08:57
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    3
+                </div>
+                <div class="table__lines table__line-sum">
+                    117 810 Р
+                </div>
+                <div class="table__lines table__line-name">
+                    Карташов Максим Кириллович
+                </div>
+            </div>
+
+            <div class="table__item status_done">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    1373265
+                </div>
+                <div class="table__lines table__line-date">
+                    15.11.2020, 14:26
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    1
+                </div>
+                <div class="table__lines table__line-sum">
+                    17 008 Р
+                </div>
+                <div class="table__lines table__line-name">
+                    Васильев Вадим Даниилович
+                </div>
+            </div>
+
+            <div class="table__item status_canceled">
+                <div class="table__lines table__line-checkbox">
+                    <div class="custom-checkbox">
+                        <label>
+                            <input class="custom-checkbox__checkbox" type="checkbox">
+                            <svg class="custom-checkbox__icon" viewBox="0 0 16 16" fill="#8055FF" stroke="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <div class="table__lines table__line-number">
+                    1311100
+                </div>
+                <div class="table__lines table__line-date">
+                    07.11.2020, 18:52
+                </div>
+                <div class="table__lines table__line-status">
+                    <svg class="table__icon status__icon status__icon_new" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_stoped" viewBox="0 0 16 16" fill="#FF8C56"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_calc" viewBox="0 0 16 16" fill="#459DF5"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="4" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_done" viewBox="0 0 16 16" fill="#0FB864"
+                        stroke="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 10L4.5 6L3 7L7 14L14.5 3.5V3L13 2L7 10Z" stroke="none" />
+                    </svg>
+                    <svg class="table__icon status__icon status__icon_canceled" viewBox="0 0 16 16" fill="none"
+                        stroke="#8055FF" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.5 12.5L3.5 3.5" fill="none" />
+                        <circle cx="8" cy="8" r="6.5" fill="none" />
+                    </svg>
+                    <span class="status__text status__text_new">Новый</span>
+                    <span class="status__text status__text_calc">Рассчет</span>
+                    <span class="status__text status__text_done">Выполнен</span>
+                    <span class="status__text status__text_stoped">Отложен</span>
+                    <span class="status__text status__text_canceled">Отменен</span>
+                </div>
+                <div class="table__lines table__line-position">
+                    -
+                </div>
+                <div class="table__lines table__line-sum">
+                    -
+                </div>
+                <div class="table__lines table__line-name">
+                    София
                 </div>
             </div>
 

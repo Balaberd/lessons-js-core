@@ -2,23 +2,21 @@
     --main-elements-color: #459DF5;
     --dim-elements-color: #BAD8F5;
     --font-color_active: #FFFFFF;
-
-
-
     --main-background-color: #FFFFFF;
-    
+    --table__status-color_done: #0FB864;
+    --table__status-color_canceled: #757272;
+
+    --additional-filter-color: #EBF0F5;
 }
 
 
 body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
-
     margin: 0;
     padding: 2rem 3rem 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
-    background-color: gray;
 }

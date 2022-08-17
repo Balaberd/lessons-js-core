@@ -1,7 +1,40 @@
 .filter {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.filter__main-panel {
     height: 2.75rem;
     max-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.filter__left-block {
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
 
-    background-color: blanchedalmond;
+.filter__main-panel_additional {
+    height: 5.5rem;
+    min-height: 5.5rem;
+    border-radius: .5rem;
+    background: var(--additional-filter-color);
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+}
+
+.filter_active .filter__main-panel_additional {
+    display: flex;
+}
+
+.filter-menu {
+    height: 3.5rem;
 }
