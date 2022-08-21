@@ -1,0 +1,29 @@
+.dropdown_status-multiple {
+    position: absolute;
+    right: 0;
+    bottom: -14.25rem;
+    /* display: none; */
+}
+
+.dropdown_choose-theme {
+    display: none;
+}
+
+.dropdown_choose-theme.active {
+    display: flex;
+}
+
+.theme-title {
+    display: none;
+}
+
+.theme-title.active {
+    display: inline;
+}
+
+.dropdown_delete-post {
+    color: var(--font-color);
+    position: absolute;
+    left: 0;
+    bottom: 2.25rem;
+}

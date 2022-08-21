@@ -1,0 +1,136 @@
+:root {
+    --font-color: #000000;
+    --background-color: #FFFFFF;
+    --main-elements-color: #459DF5;
+    --dim-elements-color: #BAD8F5;
+    --warning-color: #F53152;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgba(210, 218, 224, 0.657);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.components {
+    border: 1px dashed #8055FF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3rem;
+    gap: 3rem;
+}
+
+.components__inputs {
+    width: 22rem;
+    height: 22.5rem;
+}
+
+.components__searchbars {
+    width: 22rem;
+    height: 12rem;
+}
+
+.components__checkbox {
+    width: 6.5rem;
+    height: 4rem;
+    flex-direction: row;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.components__radio {
+    width: 6.5rem;
+    height: 4rem;
+    flex-direction: row;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.components__buttons {
+    width: 36rem;
+    height: 23rem;
+
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: .5rem;
+    grid-template-areas:
+        "box-1 box-2 box-3"
+        "box-4 box-5 .";
+}
+
+.box-1 {
+    grid-area: box-1;
+}
+
+.box-2 {
+    grid-area: box-2;
+}
+
+.box-3 {
+    grid-area: box-3;
+}
+
+.box-4 {
+    grid-area: box-4;
+}
+
+.box-5 {
+    grid-area: box-5;
+}
+
+.buttons {
+    width: 7rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.components__dropdowns {
+    width: 42rem;
+    height: 32rem;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    grid-template-areas:
+        "dropdown_status-multiple dropdown_status-single ."
+        "dropdown_page-numbre-choose dropdown_delete-post dropdown_choose-theme";
+}
+
+.dropdown_status-multiple {
+    grid-area: dropdown_status-multiple;
+}
+
+.dropdown_status-single {
+    grid-area: dropdown_status-single;
+}
+
+.dropdown_page-numbre-choose {
+    grid-area: dropdown_page-numbre-choose;
+}
+
+.dropdown_delete-post {
+    grid-area: dropdown_delete-post;
+}
+
+.dropdown_choose-theme {
+    grid-area: dropdown_choose-theme;
+}
+
+.components__page-header {
+    width: 49.125rem;
+    height: 13rem;
+    gap: 3rem;
+    padding: 3rem;
+}

@@ -1,0 +1,15 @@
+.custom-input__button_arrow {
+    display: inline;
+}
+
+.custom-input.filled .custom-input__button_reset {
+    display: inline;
+}
+
+.searchbar {
+    width: 20rem;
+}
+
+.custom-input__input {
+    color: var(--font-color);
+}
