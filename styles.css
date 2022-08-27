@@ -1,16 +1,16 @@
 .wrapper {
-    font-size: 36px;
-    font-weight: 600;
-    width: 95vw;
-    height: 95vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 3rem;
+  font-size: 36px;
+  font-weight: 600;
+  width: 95vw;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .link {
-    text-decoration: none;
-    color: rgb(17, 119, 202);
+  text-decoration: none;
+  color: rgb(17, 119, 202);
 }

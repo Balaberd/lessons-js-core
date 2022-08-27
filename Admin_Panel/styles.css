@@ -1,0 +1,43 @@
+:root {
+    --font-color: #000000;
+    --font-color_dark: #BCC4CC;
+
+    --background-color: #FFFFFF;
+    --background-color_dark: #2B2D33;
+
+    --main-elements-color: #459DF5; 
+
+    --dim-elements-color: #BAD8F5;
+    --dim-elements-color_dark: #454E52;
+
+    --warning-color: #F53152;
+
+    --additional-filter-background-color: #EBF0F5;
+    --filter__additional-background-color_dark: #171B1F;
+
+    --table-item-border-color: #EBF0F5;
+    --table-item-border-color_dark: #171B1F;
+
+    --table__status-color_done: #0FB864;
+    --table__status-color_new-stoped: #FF8C56;
+    --table__status-color_canceled: #757272;
+    --table__status-color_calc: #459DF5;
+
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: var(--font-color);
+
+    background-color: var(--background-color);
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 2rem 3rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}

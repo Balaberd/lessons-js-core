@@ -1,0 +1,29 @@
+.button {
+    width: none;
+    white-space: nowrap;
+}
+
+.button__reset-filter {
+    display: none;
+}
+
+.button__reset-filter.active {
+    display: flex;
+}
+
+.button_change-status {
+    max-width:10rem;
+    width: 9.625rem;
+}
+
+.button_delete {
+    padding: 0;
+    color: #FFFFFF;
+    background-color: var(--warning-color);
+    position: relative;
+}
+
+.button_delete .button__icon {
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+}
